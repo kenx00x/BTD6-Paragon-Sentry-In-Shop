@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BTD6 Paragon Sentry In Shop", "BTD6 Paragon Sentry In Shop\BTD6 Paragon Sentry In Shop.csproj", "{D273A371-950D-40B7-A496-478B53A6403C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D273A371-950D-40B7-A496-478B53A6403C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D273A371-950D-40B7-A496-478B53A6403C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D273A371-950D-40B7-A496-478B53A6403C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D273A371-950D-40B7-A496-478B53A6403C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E3D812A2-16D1-4977-AA61-A072144BCC58}
+	EndGlobalSection
+EndGlobal
