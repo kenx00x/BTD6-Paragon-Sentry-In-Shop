@@ -10,7 +10,7 @@ using Harmony;
 using Il2CppSystem.Collections.Generic;
 using MelonLoader;
 using System.IO;
-[assembly: MelonInfo(typeof(BTD6_Paragon_Sentry_In_Shop.Class1), "Paragon Sentry In Shop", "1.0.0", "kenx00x")]
+[assembly: MelonInfo(typeof(BTD6_Paragon_Sentry_In_Shop.Class1), "Paragon Sentry In Shop", "1.0.1", "kenx00x")]
 [assembly: MelonGame("Ninja Kiwi", "BloonsTD6")]
 namespace BTD6_Paragon_Sentry_In_Shop
 {
@@ -21,11 +21,11 @@ namespace BTD6_Paragon_Sentry_In_Shop
         public static int SentryParagonCost = 5000;
         public override void OnApplicationStart()
         {
-            MelonLogger.Log("Paragon Sentry In Shop mod loaded");
+            MelonLogger.Msg("Paragon Sentry In Shop mod loaded");
             Directory.CreateDirectory($"{dir}");
             if (File.Exists(config))
             {
-                MelonLogger.Log("Reading config file");
+                MelonLogger.Msg("Reading config file");
                 using (StreamReader sr = File.OpenText(config))
                 {
                     string s = "";
@@ -34,16 +34,16 @@ namespace BTD6_Paragon_Sentry_In_Shop
                         SentryParagonCost = int.Parse(s.Substring(s.IndexOf(char.Parse("=")) + 1));
                     }
                 }
-                MelonLogger.Log("Done reading");
+                MelonLogger.Msg("Done reading");
             }
             else
             {
-                MelonLogger.Log("Creating config file");
+                MelonLogger.Msg("Creating config file");
                 using (StreamWriter sw = File.CreateText(config))
                 {
                     sw.WriteLine("ParagonSentryCost=5000");
                 }
-                MelonLogger.Log("Done Creating");
+                MelonLogger.Msg("Done Creating");
             }
         }
         [HarmonyPatch(typeof(ProfileModel), "Validate")]
@@ -55,11 +55,11 @@ namespace BTD6_Paragon_Sentry_In_Shop
                 HashSet<string> unlockedTowers = __instance.unlockedTowers;
                 if (unlockedTowers.Contains("SentryParagon"))
                 {
-                    MelonLogger.Log("Paragon Sentry already unlocked");
+                    MelonLogger.Msg("Paragon Sentry already unlocked");
                 }
                 else
                 {
-                    MelonLogger.Log("unlocking Paragon Sentry");
+                    MelonLogger.Msg("unlocking Paragon Sentry");
                     unlockedTowers.Add("SentryParagon");
                 }
             }
